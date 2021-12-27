@@ -1,7 +1,6 @@
 import 'package:cati/common/app_colors.dart';
 import 'package:cati/common/app_images.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import 'splash_logic.dart';

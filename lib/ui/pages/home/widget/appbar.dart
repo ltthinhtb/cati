@@ -1,7 +1,4 @@
-import 'package:cati/common/app_colors.dart';
 import 'package:cati/common/app_images.dart';
-import 'package:cati/generated/l10n.dart';
-import 'package:cati/ui/widgets/textfields/app_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
