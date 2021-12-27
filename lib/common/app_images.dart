@@ -1,38 +1,26 @@
 class AppImages {
-  //logo
-  static String logoPNG = 'assets/image/logo.png';
-  static String logoUrl = 'https://i.ibb.co/3RyrFSd/Group-13215.png';
+  /// Logo
+  static String splashLogo = 'assets/image/splash_logo.png';
+  static String horizonLogoText = 'assets/icon_svg/horizon_logo_text.svg';
+  static String verticalLogoText = 'assets/image/vertical_logo_text.png';
 
-  //background
-  static String background = 'assets/image/background.png';
+  /// Icons
+  static String circleCheck = 'assets/icon_svg/circle_check.svg';
+  static String emptySquareCheck = 'assets/icon_svg/empty_square_check.svg';
+  static String squareCheck = 'assets/icon_svg/square_check.svg';
+  static String lock = 'assets/icon_svg/lock.svg';
+  static String phone = 'assets/icon_svg/phone.svg';
+  static String greenArrowLeft = 'assets/icon_svg/green_arrow.svg';
+  static String calendar = 'assets/icon_svg/calendar.svg';
+  static String solidCalendar = 'assets/icon_svg/solid_calendar.svg';
+  static String comment = 'assets/icon_svg/comment.svg';
+  static String pen = 'assets/icon_svg/pen.svg';
+  static String news = 'assets/icon_svg/news.svg';
 
-  //icon bottom
-  static String home = 'assets/icon_svg/home.png';
-  static String chat = 'assets/icon_svg/chat.png';
-  static String clock = 'assets/icon_svg/clock.png';
-  static String user = 'assets/icon_svg/user.png';
-
-  //icon
-  static String bell = 'assets/icon_svg/bell.svg';
-  static String search = 'assets/icon_svg/search.svg';
-
-  //icon home page
-  static String bds_buy = 'assets/icon_svg/bds_buy.svg';
-  static String bds_sign = 'assets/icon_svg/bds_sign.svg';
-  static String bds_report = 'assets/icon_svg/bds_report.svg';
-  static String bds_manager = 'assets/icon_svg/bds_manager.svg';
-  static String trending = 'assets/icon_svg/trending.svg';
-  static String bds_buy_together = 'assets/icon_svg/bds_buy_together.svg';
-  static String location = 'assets/icon_svg/location.svg';
-  static String invest = 'assets/icon_svg/invest.svg';
-  static String discover = 'assets/icon_svg/discover.svg';
-
-  //icon detail bds
-  static String clock_icon = 'assets/icon_svg/clock.svg';
-  static String increase_circle = 'assets/icon_svg/increase.svg';
-  static String bed = 'assets/icon_svg/bed.svg';
-  static String wc = 'assets/icon_svg/wc.svg';
-  static String area = 'assets/icon_svg/area.svg';
-  static String document = 'assets/icon_svg/document.svg';
-
+  /// Navigation bar icon
+  static String home = 'assets/icon_svg/home.svg';
+  static String bachelorsHat = 'assets/icon_svg/bachelors_hat.svg';
+  static String course = 'assets/icon_svg/course.svg';
+  static String openBook = 'assets/icon_svg/open_book.svg';
+  static String account = 'assets/icon_svg/account.svg';
 }

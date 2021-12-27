@@ -6,6 +6,6 @@ extension AuthApiService on ApiService {
   }
 
   Future<SignUpResponse?> signUp(SignUpRequest request) async {
-    return await _apiClient.sign_up(request);
+    return await _apiClient.signUp(request);
   }
 }

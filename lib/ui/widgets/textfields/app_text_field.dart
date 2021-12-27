@@ -1,3 +1,4 @@
+import 'package:cati/common/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AppTextFieldWidget extends StatefulWidget {
@@ -14,9 +15,11 @@ class AppTextFieldWidget extends StatefulWidget {
   final bool? filled;
   final Color? fillColor;
   final Widget? prefixIcon;
+  final String? labelText;
 
-  AppTextFieldWidget(
-      {this.inputController,
+  const AppTextFieldWidget(
+      {Key? key,
+      this.inputController,
       this.onChanged,
       this.textInputType,
       this.label,
@@ -28,7 +31,9 @@ class AppTextFieldWidget extends StatefulWidget {
       this.padding,
       this.filled,
       this.fillColor,
-      this.prefixIcon});
+      this.prefixIcon,
+      this.labelText})
+      : super(key: key);
 
   @override
   State<AppTextFieldWidget> createState() => _AppTextFieldWidgetState();
@@ -65,31 +70,33 @@ class _AppTextFieldWidgetState extends State<AppTextFieldWidget> {
           controller: widget.inputController,
           obscureText: _obscureText,
           onFieldSubmitted: widget.onFieldSubmitted,
+          cursorColor: AppColors.primary,
           decoration: InputDecoration(
-              filled: widget.filled,
-              fillColor: widget.fillColor,
-              hintText: widget.hintText,
-              contentPadding: widget.padding ??
-                  const EdgeInsets.symmetric(horizontal: 14, vertical: 15),
-              suffixIconConstraints: const BoxConstraints(maxHeight: 24),
-              prefixIconConstraints: const BoxConstraints(maxHeight: 24),
-              prefixIcon: widget.prefixIcon,
-              suffixIcon: widget.obscureText
-                  ? GestureDetector(
-                      behavior: HitTestBehavior.opaque,
-                      onTap: () {
-                        setState(() {
-                          _obscureText = !_obscureText;
-                        });
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.only(right: 10),
-                        child: Icon(_obscureText
-                            ? Icons.remove_red_eye_outlined
-                            : Icons.remove_red_eye),
-                      ),
-                    )
-                  : null),
+            filled: widget.filled,
+            fillColor: widget.fillColor,
+            hintText: widget.hintText,
+            contentPadding: widget.padding ??
+                const EdgeInsets.only(left: 16, right: 16, top: 22, bottom: 20),
+            suffixIconConstraints: const BoxConstraints(maxHeight: 24),
+            prefixIconConstraints: const BoxConstraints(maxHeight: 24),
+            prefixIcon: widget.prefixIcon,
+            suffixIcon: widget.obscureText
+                ? GestureDetector(
+                    behavior: HitTestBehavior.opaque,
+                    onTap: () {
+                      setState(() {
+                        _obscureText = !_obscureText;
+                      });
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 10),
+                      child: Icon(_obscureText
+                          ? Icons.remove_red_eye_outlined
+                          : Icons.remove_red_eye),
+                    ),
+                  )
+                : null,
+          ),
           keyboardType: widget.textInputType,
           onChanged: widget.onChanged,
           validator: widget.validator,

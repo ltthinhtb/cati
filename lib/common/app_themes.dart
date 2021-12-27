@@ -18,7 +18,7 @@ class AppThemes {
   static const Color _darkBackgroundColor = AppColors.backgroundDarker;
 
   //Text
-  static const Color _lightTextColor = AppColors.text_black;
+  static const Color _lightTextColor = AppColors.textBlack;
   static const Color _darkTextColor = AppColors.white;
 
   //Border
@@ -26,7 +26,7 @@ class AppThemes {
   // static const Color _darkBorderColor = Colors.grey;
 
   //Icon
-  static const Color _lightIconColor = AppColors.icon_black;
+  static const Color _lightIconColor = AppColors.iconBlack;
   static const Color _darkIconColor = AppColors.white;
 
   //Fill
@@ -35,43 +35,43 @@ class AppThemes {
 
   //Text themes
   static final TextTheme _lightTextTheme = TextTheme(
-    headline5: AppTextStyle.H5.copyWith(color: _lightTextColor),
-    headline6: AppTextStyle.H6.copyWith(color: _lightTextColor),
-    headline4: AppTextStyle.H4.copyWith(color: _lightTextColor),
-    headline3: AppTextStyle.H3.copyWith(color: _lightTextColor),
-    headline2: AppTextStyle.H2.copyWith(color: _lightTextColor),
+    headline5: AppTextStyle.h5.copyWith(color: _lightTextColor),
+    headline6: AppTextStyle.h6.copyWith(color: _lightTextColor),
+    headline4: AppTextStyle.h4.copyWith(color: _lightTextColor),
+    headline3: AppTextStyle.h3.copyWith(color: _lightTextColor),
+    headline2: AppTextStyle.h1.copyWith(color: _lightTextColor),
     subtitle1: AppTextStyle.subTitle1.copyWith(color: _lightTextColor),
     subtitle2: AppTextStyle.subTitle2.copyWith(color: _lightTextColor),
     bodyText1: AppTextStyle.bodyText1.copyWith(color: _lightTextColor),
     bodyText2: AppTextStyle.bodyText2.copyWith(color: _lightTextColor),
-    button: AppTextStyle.ButtonBold.copyWith(color: _lightTextColor),
+    button: AppTextStyle.buttonBold.copyWith(color: _lightTextColor),
     caption: AppTextStyle.caption.copyWith(color: _lightTextColor),
   );
 
   static final TextTheme _dartTextTheme = TextTheme(
-    headline5: AppTextStyle.H5.copyWith(color: _darkTextColor),
-    headline6: AppTextStyle.H6.copyWith(color: _darkTextColor),
-    headline4: AppTextStyle.H4.copyWith(color: _darkTextColor),
-    headline3: AppTextStyle.H3.copyWith(color: _darkTextColor),
-    headline2: AppTextStyle.H2.copyWith(color: _darkTextColor),
+    headline5: AppTextStyle.h5.copyWith(color: _darkTextColor),
+    headline6: AppTextStyle.h6.copyWith(color: _darkTextColor),
+    headline4: AppTextStyle.h4.copyWith(color: _darkTextColor),
+    headline3: AppTextStyle.h3.copyWith(color: _darkTextColor),
+    headline2: AppTextStyle.h1.copyWith(color: _darkTextColor),
     subtitle1: AppTextStyle.subTitle1.copyWith(color: _darkTextColor),
     subtitle2: AppTextStyle.subTitle2.copyWith(color: _darkTextColor),
     bodyText1: AppTextStyle.bodyText1.copyWith(color: _darkTextColor),
     bodyText2: AppTextStyle.bodyText2.copyWith(color: _darkTextColor),
-    button: AppTextStyle.ButtonBold.copyWith(color: _darkTextColor),
+    button: AppTextStyle.buttonBold.copyWith(color: _darkTextColor),
     caption: AppTextStyle.caption.copyWith(color: _darkTextColor),
   );
 
   static final ElevatedButtonThemeData _elevatedButtonThemeData =
       ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      primary: AppColors.button_yellow,
+      primary: AppColors.buttonYellow,
       onPrimary: AppColors.white,
-      textStyle: AppTextStyle.ButtonBold,
+      textStyle: AppTextStyle.buttonBold,
     ),
   );
 
-  static final AppBarTheme _appBarTheme = const AppBarTheme(
+  static const AppBarTheme _appBarTheme = AppBarTheme(
     backgroundColor: AppColors.white,
   );
 
@@ -87,29 +87,28 @@ class AppThemes {
 
   static OutlineInputBorder _defaultBorder() {
     return const OutlineInputBorder(
-        borderRadius: BorderRadius.all(Radius.circular(5)),
-        borderSide: BorderSide(color: AppColors.border, width: 1));
+      borderRadius: BorderRadius.all(Radius.circular(40)),
+      borderSide: BorderSide(color: AppColors.border, width: 1),
+    );
   }
 
   static final InputDecorationTheme _inputDecorationLightTheme =
       InputDecorationTheme(
-          isDense: true,
-          labelStyle:
-              AppTextStyle.subTitle1.copyWith(color: AppColors.text_black),
-          hintStyle:
-              AppTextStyle.subTitle1.copyWith(color: AppColors.hint_text),
-          errorStyle: AppTextStyle.subTitle1.copyWith(color: AppColors.red),
-          border: _defaultBorder(),
-          focusedBorder: _defaultBorder().copyWith(
-              borderSide: const BorderSide(color: AppColors.primary, width: 1)),
-          enabledBorder: _defaultBorder(),
-          disabledBorder: _defaultBorder(),
-          errorBorder: _defaultBorder().copyWith(
-              borderRadius: const BorderRadius.all(Radius.circular(5)),
-              borderSide: const BorderSide(color: AppColors.red, width: 1)),
-          focusedErrorBorder: _defaultBorder().copyWith(
-              borderRadius: const BorderRadius.all(Radius.circular(5)),
-              borderSide: const BorderSide(color: AppColors.red, width: 1)));
+    isDense: true,
+    labelStyle: AppTextStyle.subTitle1.copyWith(color: AppColors.hintText),
+    hintStyle: AppTextStyle.subTitle1.copyWith(color: AppColors.hintText),
+    errorStyle: AppTextStyle.subTitle1.copyWith(color: AppColors.red),
+    border: _defaultBorder(),
+    focusedBorder: _defaultBorder().copyWith(
+        borderSide: const BorderSide(color: AppColors.primary, width: 1)),
+    enabledBorder: _defaultBorder(),
+    disabledBorder: _defaultBorder(),
+    errorBorder: _defaultBorder()
+        .copyWith(borderSide: const BorderSide(color: AppColors.red, width: 1)),
+    focusedErrorBorder: _defaultBorder().copyWith(
+      borderSide: const BorderSide(color: AppColors.red, width: 1),
+    ),
+  );
 
   ///Light theme
   static final ThemeData lightTheme = ThemeData(
@@ -132,7 +131,7 @@ class AppThemes {
     bottomNavigationBarTheme: _bottomNavigationBarThemeData,
     appBarTheme: AppBarTheme(
         iconTheme: const IconThemeData(color: _darkIconColor),
-        titleTextStyle: AppTextStyle.H6,
+        titleTextStyle: AppTextStyle.h6,
         backgroundColor: _lightPrimaryColor),
     iconTheme: const IconThemeData(
       color: _lightIconColor,

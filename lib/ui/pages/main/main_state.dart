@@ -1,7 +1,6 @@
 import 'package:cati/ui/pages/home/view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_rx/src/rx_types/rx_types.dart';
-import 'package:cati/ui/pages/setting/setting_page.dart';
 
 class MainState {
   late RxInt selectedIndex;
@@ -15,10 +14,10 @@ class MainState {
     selectedIndex = 0.obs;
     //PageView page
     pageList = [
-      HomePage(),
+      const HomePage(),
       const Scaffold(),
       const Scaffold(),
-      const SettingPage(),
+      const Scaffold(),
     ];
     //Page controller
     pageController = PageController();
