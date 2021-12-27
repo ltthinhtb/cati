@@ -11,7 +11,7 @@ abstract class ApiClient {
 
   Future<TokenEntity> authLogin(String user, String pass);
 
-  Future<SignUpResponse> sign_up(SignUpRequest request);
+  Future<SignUpResponse> signUp(SignUpRequest request);
 
   Future<dynamic> signOut();
 }
@@ -89,7 +89,7 @@ class _ApiClient implements ApiClient {
   }
 
   @override
-  Future<SignUpResponse> sign_up(SignUpRequest request) async {
+  Future<SignUpResponse> signUp(SignUpRequest request) async {
     Response _result = await _requestApi(
         _dio.post('/api/v1/Authenticate/UserRegister', data: request.toJson()));
     final value = SignUpResponse.fromJson(_result.data!);

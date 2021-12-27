@@ -4,9 +4,10 @@ import 'package:cati/generated/l10n.dart';
 
 enum MainTab {
   home,
-  chat,
-  history,
-  profile,
+  technic,
+  course,
+  test,
+  account,
 }
 
 extension MainTabExtension on MainTab {
@@ -14,11 +15,13 @@ extension MainTabExtension on MainTab {
     switch (this) {
       case MainTab.home:
         return S.of(context).home;
-      case MainTab.chat:
+      case MainTab.technic:
         return S.of(context).message;
-      case MainTab.history:
+      case MainTab.course:
         return S.of(context).history;
-      case MainTab.profile:
+      case MainTab.test:
+        return S.of(context).user;
+      case MainTab.account:
         return S.of(context).user;
     }
   }
@@ -27,12 +30,14 @@ extension MainTabExtension on MainTab {
     switch (this) {
       case MainTab.home:
         return AppImages.home;
-      case MainTab.history:
-        return AppImages.clock;
-      case MainTab.profile:
-        return AppImages.user;
-      case MainTab.chat:
-        return AppImages.chat;
+      case MainTab.technic:
+        return AppImages.bachelorsHat;
+      case MainTab.course:
+        return AppImages.course;
+      case MainTab.test:
+        return AppImages.openBook;
+      case MainTab.account:
+        return AppImages.account;
     }
   }
 }

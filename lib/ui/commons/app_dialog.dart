@@ -12,7 +12,7 @@ class AppDiaLog {
     await Get.defaultDialog(
         title: title ?? S.current.notice,
         middleText: middleText ?? " ",
-        titleStyle: AppTextStyle.H3.copyWith(fontSize: 18),
+        titleStyle: AppTextStyle.h3.copyWith(fontSize: 18),
         middleTextStyle: AppTextStyle.bodyText1,
         barrierDismissible: false,
         confirm: ButtonText(

@@ -21,21 +21,11 @@ class AppBarHome extends StatelessWidget implements PreferredSizeWidget {
       ),
       leadingWidth: 50,
       actions: [
-        SvgPicture.asset(AppImages.bell),
+        SvgPicture.asset(AppImages.home),
         const SizedBox(
           width: 20,
         )
       ],
-      title: AppTextFieldWidget(
-        padding: const EdgeInsets.symmetric(vertical: 9),
-        filled: true,
-        fillColor: AppColors.background2,
-        hintText: S.of(context).search_real_estate,
-        prefixIcon: Padding(
-          padding: const EdgeInsets.only(left: 12, right: 6),
-          child: SvgPicture.asset(AppImages.search),
-        ),
-      ),
       elevation: 0,
     );
   }

@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cati/common/app_colors.dart';
 import 'package:cati/common/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -26,22 +27,12 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.green,
       body: Center(
         child: SizedBox(
-          height: 200,
-          width: 200,
-          child: CachedNetworkImage(
-            imageUrl: AppImages.logoUrl,
-            imageBuilder: (context, imageProvider) => Container(
-              height: 200,
-              width: 200,
-              decoration: BoxDecoration(
-                image: DecorationImage(image: imageProvider),
-              ),
-            ),
-            placeholder: (context, url) => Container(),
-            errorWidget: (context, url, error) => const Icon(Icons.error),
-          ),
+          height: 250,
+          width: 250,
+          child: Image.asset(AppImages.splashLogo)
         ),
       ),
     );
