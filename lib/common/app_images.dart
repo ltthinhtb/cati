@@ -16,6 +16,7 @@ class AppImages {
   static String comment = 'assets/icon_svg/comment.svg';
   static String pen = 'assets/icon_svg/pen.svg';
   static String news = 'assets/icon_svg/news.svg';
+  static String search = 'assets/icon_svg/search.svg';
 
   /// Navigation bar icon
   static String home = 'assets/icon_svg/home.svg';

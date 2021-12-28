@@ -1,8 +1,10 @@
 import 'package:cati/common/app_colors.dart';
 import 'package:cati/common/app_images.dart';
 import 'package:cati/ui/widgets/textfields/app_text_field.dart';
+import 'package:cati/ui/widgets/textfields/search_text_field.dart';
 import 'package:cati/utils/validator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import 'sign_in_logic.dart';
@@ -34,6 +36,19 @@ class _SignInPageState extends State<SignInPage> with Validator {
               prefixIcon: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 14),
                 child: Icon(Icons.phone, color: AppColors.hintText),
+              ),
+            ),
+            Container(
+              height: 100,
+              margin: const EdgeInsets.only(top: 20),
+              color: AppColors.green.withOpacity(.2),
+              alignment: Alignment.center,
+              child: SearchTextField(
+                hintText: 'Tìm kiếm',
+                prefixIcon: Padding(
+                  padding: const EdgeInsets.only(left: 14, right: 12),
+                  child: SvgPicture.asset(AppImages.search),
+                ),
               ),
             ),
           ],
