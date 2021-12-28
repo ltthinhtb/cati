@@ -12,6 +12,8 @@ class AppTextStyle {
       fontStyle: FontStyle.normal, fontSize: 22, fontWeight: FontWeight.w700);
   static TextStyle h3 = GoogleFonts.roboto(
       fontStyle: FontStyle.normal, fontSize: 16, fontWeight: FontWeight.w700);
+  static TextStyle h2 = GoogleFonts.roboto(
+      fontStyle: FontStyle.normal, fontSize: 14, fontWeight: FontWeight.w700);
   static TextStyle h1 = GoogleFonts.roboto(
       fontStyle: FontStyle.normal, fontSize: 13, fontWeight: FontWeight.w700);
   static TextStyle buttonBold = GoogleFonts.roboto(
