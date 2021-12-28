@@ -21,7 +21,7 @@ class AppTextStyle {
   static TextStyle caption = GoogleFonts.roboto(
       fontStyle: FontStyle.normal, fontSize: 12, fontWeight: FontWeight.w400);
   static TextStyle subTitle1 = GoogleFonts.roboto(
-      fontStyle: FontStyle.normal, fontSize: 15, fontWeight: FontWeight.w400);
+      fontStyle: FontStyle.normal, fontSize: 16, fontWeight: FontWeight.w400);
   static TextStyle subTitle2 = GoogleFonts.roboto(
       fontStyle: FontStyle.normal, fontSize: 14, fontWeight: FontWeight.w400);
   static TextStyle bodyText1 = GoogleFonts.roboto(
