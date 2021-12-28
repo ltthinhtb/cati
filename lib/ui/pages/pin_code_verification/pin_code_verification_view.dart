@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'package:cati/common/app_colors.dart';
 import 'package:cati/common/app_images.dart';
+import 'package:cati/ui/widgets/common/teacher_info_card.dart';
+import 'package:cati/ui/widgets/common/video_course_card.dart';
 import 'package:cati/ui/widgets/textfields/app_text_field.dart';
 import 'package:cati/ui/widgets/textfields/search_text_field.dart';
 import 'package:flutter/gestures.dart';
@@ -187,16 +189,66 @@ class _PinCodeVerificationViewState extends State<PinCodeVerificationView> {
                 ),
               ),
               Container(
-                height: 100,
+                height: 1000,
                 margin: const EdgeInsets.only(top: 20),
                 color: AppColors.green.withOpacity(.2),
                 alignment: Alignment.center,
-                child: SearchTextField(
-                  hintText: 'Tìm kiếm',
-                  prefixIcon: Padding(
-                    padding: const EdgeInsets.only(left: 14, right: 12),
-                    child: SvgPicture.asset(AppImages.search),
-                  ),
+                child: Column(
+                  children: [
+                    SearchTextField(
+                      hintText: 'Tìm kiếm',
+                      prefixIcon: Padding(
+                        padding: const EdgeInsets.only(left: 14, right: 12),
+                        child: SvgPicture.asset(AppImages.search),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    Row(
+                      children: const [
+                        Expanded(
+                          child: VideoCourseCard(
+                            courseName: 'Tên khóa học mới.....',
+                            courseNumber: 50,
+                            courseImage:
+                                'https://firebasestorage.googleapis.com/v0/b/zporter-dev-media/o/message%2F2021-12-24%2014%3A56%3A55.309426?alt=media&token=a3660d6e-651b-456f-940c-fb9fd53d7a55',
+                          ),
+                        ),
+                        SizedBox(width: 20),
+                        Expanded(
+                          child: VideoCourseCard(
+                            courseName: 'Tên khóa học mới.....',
+                            courseNumber: 50,
+                            courseImage:
+                                'https://firebasestorage.googleapis.com/v0/b/zporter-dev-media/o/message%2F2021-12-24%2014%3A56%3A55.309426?alt=media&token=a3660d6e-651b-456f-940c-fb9fd53d7a55',
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    Row(
+                      children: const [
+                        Expanded(
+                          child: TeacherInfoCard(
+                            position: 'Trung cấp - Cao Đẳng',
+                            workingAddress: 'Catiedu',
+                            teacherName: 'Cô: Nguyễn Thu Trà ',
+                            teacherImage:
+                                'https://firebasestorage.googleapis.com/v0/b/zporter-dev-media/o/message%2F2021-12-24%2014%3A56%3A55.309426?alt=media&token=a3660d6e-651b-456f-940c-fb9fd53d7a55',
+                          ),
+                        ),
+                        SizedBox(width: 20),
+                        Expanded(
+                          child: TeacherInfoCard(
+                            position: 'Trung cấp - Cao Đẳng',
+                            workingAddress: 'Catiedu',
+                            teacherName: 'Cô: Nguyễn Thu Trà',
+                            teacherImage:
+                                'https://firebasestorage.googleapis.com/v0/b/zporter-dev-media/o/message%2F2021-12-24%2014%3A56%3A55.309426?alt=media&token=a3660d6e-651b-456f-940c-fb9fd53d7a55',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
             ],
