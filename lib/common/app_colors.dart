@@ -36,6 +36,7 @@ class AppColors {
   ///Text
   static const Color white = Color(0xFFFFFFFF);
   static const Color textBlack = Color(0xFF333333);
+  static const Color textBlack2 = Color(0xFF555555);
   static const Color hintText = Color(0xff999999);
 
   ///TextField
