@@ -3,7 +3,9 @@ import 'package:cati/common/app_colors.dart';
 import 'package:cati/common/app_images.dart';
 import 'package:cati/ui/widgets/common/comment_card.dart';
 import 'package:cati/ui/widgets/common/course_date_card.dart';
+import 'package:cati/ui/widgets/common/course_title_widget.dart';
 import 'package:cati/ui/widgets/common/entertainment_news_card.dart';
+import 'package:cati/ui/widgets/common/see_more_line.dart';
 import 'package:cati/ui/widgets/common/teacher_info_card.dart';
 import 'package:cati/ui/widgets/common/video_course_card.dart';
 import 'package:cati/ui/widgets/textfields/app_text_field.dart';
@@ -279,10 +281,10 @@ class _PinCodeVerificationViewState extends State<PinCodeVerificationView> {
                       const SizedBox(height: 20),
                       const CommentCard(
                         avatarUrl:
-                        'https://firebasestorage.googleapis.com/v0/b/zporter-dev-media/o/message%2F2021-12-24%2014%3A56%3A55.309426?alt=media&token=a3660d6e-651b-456f-940c-fb9fd53d7a55',
+                            'https://firebasestorage.googleapis.com/v0/b/zporter-dev-media/o/message%2F2021-12-24%2014%3A56%3A55.309426?alt=media&token=a3660d6e-651b-456f-940c-fb9fd53d7a55',
                         commenterName: 'Hương Nguyễn',
                         content:
-                        'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm',
+                            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm',
                       ),
                     ],
                   ),
@@ -294,6 +296,16 @@ class _PinCodeVerificationViewState extends State<PinCodeVerificationView> {
                   description: '10 bí quyết khi làm bài trắc nghiệm phải nhớ',
                   imageUrl:
                       'https://firebasestorage.googleapis.com/v0/b/zporter-dev-media/o/message%2F2021-12-24%2014%3A56%3A55.309426?alt=media&token=a3660d6e-651b-456f-940c-fb9fd53d7a55',
+                ),
+                const SeeMoreLine(),
+                const SizedBox(height: 50),
+                CourseTitleWidget(
+                  title: 'DU HỌC',
+                  leadingIcon: SvgPicture.asset(
+                    AppImages.whiteHat,
+                    color: AppColors.green,
+                  ),
+                  penColor: AppColors.grey,
                 ),
                 const SizedBox(height: 50),
               ],
