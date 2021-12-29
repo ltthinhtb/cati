@@ -18,6 +18,8 @@ class AppImages {
   static String news = 'assets/icon_svg/news.svg';
   static String search = 'assets/icon_svg/search.svg';
   static String videoPlay = 'assets/icon_svg/video_play.svg';
+  static String whiteHat = 'assets/icon_svg/white_hat.svg';
+  static String dotLine = 'assets/icon_svg/dot_line.svg';
 
   /// Navigation bar icon
   static String home = 'assets/icon_svg/home.svg';

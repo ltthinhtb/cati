@@ -10,6 +10,7 @@ class AppColors {
   static const Color green = Color(0xFF00B14F);
   static const Color blue = Color(0xff007AFF);
   static const Color red = Color(0xFFF13C23);
+  static const Color grey = Color(0xFF888888);
 
   ///Background
   static const Color background = Color(0xFF1a222d);
@@ -29,6 +30,7 @@ class AppColors {
   static const Color dashLine = Color(0xFFECECEC);
   static const Color dividerProgress = Color(0xFFF4F4F5);
   static const Color maxDivider = Color(0xffF5F5F5);
+  static const Color blurGreen = Color(0xff7EC1B9);
 
   ///Icon
   static const Color iconBlack = Color(0xFF000000);
