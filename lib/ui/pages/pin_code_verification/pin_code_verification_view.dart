@@ -1,6 +1,9 @@
 import 'dart:async';
 import 'package:cati/common/app_colors.dart';
 import 'package:cati/common/app_images.dart';
+import 'package:cati/ui/widgets/common/comment_card.dart';
+import 'package:cati/ui/widgets/common/course_date_card.dart';
+import 'package:cati/ui/widgets/common/entertainment_news_card.dart';
 import 'package:cati/ui/widgets/common/teacher_info_card.dart';
 import 'package:cati/ui/widgets/common/video_course_card.dart';
 import 'package:cati/ui/widgets/textfields/app_text_field.dart';
@@ -189,12 +192,13 @@ class _PinCodeVerificationViewState extends State<PinCodeVerificationView> {
                   ),
                 ),
                 Container(
-                  height: 1000,
+                  height: 900,
                   margin: const EdgeInsets.only(top: 20),
                   color: AppColors.green.withOpacity(.2),
                   alignment: Alignment.center,
                   child: Column(
                     children: [
+                      const SizedBox(height: 20),
                       SearchTextField(
                         hintText: 'Tìm kiếm',
                         prefixIcon: Padding(
@@ -248,9 +252,50 @@ class _PinCodeVerificationViewState extends State<PinCodeVerificationView> {
                           ),
                         ],
                       ),
+                      const SizedBox(height: 20),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: CourseDateCard(
+                              courseName:
+                                  'Kiểm định an toàn kỹ thuật thiết bị Uy tín...',
+                              dateTime: DateTime.now(),
+                              courseImage:
+                                  'https://firebasestorage.googleapis.com/v0/b/zporter-dev-media/o/message%2F2021-12-24%2014%3A56%3A55.309426?alt=media&token=a3660d6e-651b-456f-940c-fb9fd53d7a55',
+                            ),
+                          ),
+                          const SizedBox(width: 20),
+                          Expanded(
+                            child: CourseDateCard(
+                              courseName:
+                                  'Kiểm định an toàn kỹ thuật thiết bị Uy tín...',
+                              dateTime: DateTime.now(),
+                              courseImage:
+                                  'https://firebasestorage.googleapis.com/v0/b/zporter-dev-media/o/message%2F2021-12-24%2014%3A56%3A55.309426?alt=media&token=a3660d6e-651b-456f-940c-fb9fd53d7a55',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 20),
+                      const CommentCard(
+                        avatarUrl:
+                        'https://firebasestorage.googleapis.com/v0/b/zporter-dev-media/o/message%2F2021-12-24%2014%3A56%3A55.309426?alt=media&token=a3660d6e-651b-456f-940c-fb9fd53d7a55',
+                        commenterName: 'Hương Nguyễn',
+                        content:
+                        'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm',
+                      ),
                     ],
                   ),
                 ),
+                const SizedBox(height: 50),
+                EntertainmentNewsCard(
+                  dateTime: DateTime.now(),
+                  title: 'Hướng nghiệp',
+                  description: '10 bí quyết khi làm bài trắc nghiệm phải nhớ',
+                  imageUrl:
+                      'https://firebasestorage.googleapis.com/v0/b/zporter-dev-media/o/message%2F2021-12-24%2014%3A56%3A55.309426?alt=media&token=a3660d6e-651b-456f-940c-fb9fd53d7a55',
+                ),
+                const SizedBox(height: 50),
               ],
             ),
           ),

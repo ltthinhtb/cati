@@ -1,8 +1,8 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cati/common/app_colors.dart';
 import 'package:cati/common/app_dimens.dart';
-import 'package:cati/ui/widgets/loading_widget/circle_progress_widget.dart';
 import 'package:flutter/material.dart';
+
+import 'custom_cache_image_network.dart';
 
 class TeacherInfoCard extends StatelessWidget {
   final String teacherImage;
@@ -25,21 +25,10 @@ class TeacherInfoCard extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: 108,
-            width: double.infinity,
-            color: AppColors.white,
-            child: CachedNetworkImage(
-              imageUrl: teacherImage,
-              fit: BoxFit.cover,
-              placeholder: (context, url) => Center(child: loadWidget()),
-              errorWidget: (context, url, error) => const Center(
-                child: Icon(
-                  Icons.error_outlined,
-                  color: AppColors.red,
-                ),
-              ),
-            ),
-          ),
+              height: 108,
+              width: double.infinity,
+              color: AppColors.white,
+              child: CustomCacheNetworkImage(imageUrl: teacherImage)),
           Container(
             height: 84,
             width: double.infinity,

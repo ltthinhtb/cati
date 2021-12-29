@@ -1,20 +1,21 @@
 import 'package:cati/common/app_colors.dart';
 import 'package:cati/common/app_dimens.dart';
 import 'package:cati/common/app_images.dart';
-import 'package:cati/ui/widgets/common/custom_cache_image_network.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class VideoCourseCard extends StatelessWidget {
+import 'custom_cache_image_network.dart';
+
+class CourseDateCard extends StatelessWidget {
   final String courseImage;
   final String courseName;
-  final int courseNumber;
+  final DateTime dateTime;
 
-  const VideoCourseCard({
+  const CourseDateCard({
     Key? key,
     required this.courseImage,
     required this.courseName,
-    this.courseNumber = 0,
+    required this.dateTime,
   }) : super(key: key);
 
   @override
@@ -24,10 +25,11 @@ class VideoCourseCard extends StatelessWidget {
       child: Column(
         children: [
           Container(
-              height: 108,
-              width: double.infinity,
-              color: AppColors.white,
-              child: CustomCacheNetworkImage(imageUrl: courseImage)),
+            height: 108,
+            width: double.infinity,
+            color: AppColors.white,
+            child: CustomCacheNetworkImage(imageUrl: courseImage),
+          ),
           Container(
             height: 84,
             width: double.infinity,
@@ -44,18 +46,18 @@ class VideoCourseCard extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    SvgPicture.asset(AppImages.calendar),
+                    const SizedBox(width: AppDimens.dimen4),
                     Text(
-                      '$courseNumber Bài',
+                      '${dateTime.day}/${dateTime.month}/${dateTime.year}',
                       style: Theme.of(context)
                           .textTheme
                           .caption!
-                          .copyWith(color: AppColors.green),
+                          .copyWith(color: AppColors.hintText),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                     ),
-                    SvgPicture.asset(AppImages.videoPlay)
                   ],
                 )
               ],
