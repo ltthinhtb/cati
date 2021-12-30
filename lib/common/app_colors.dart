@@ -58,4 +58,7 @@ class AppColors {
 
   ///disable
   static const Color disable = Color(0xFFA5A5A5);
+
+  /// linear progress
+  static const Color linearProgressBackground = Color(0xFFC4C4C4);
 }

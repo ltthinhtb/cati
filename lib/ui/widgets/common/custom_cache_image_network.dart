@@ -6,16 +6,18 @@ import 'package:flutter/material.dart';
 class CustomCacheNetworkImage extends StatelessWidget {
   const CustomCacheNetworkImage({
     Key? key,
-    required this.imageUrl,
+    required this.imageUrl, this.width,
   }) : super(key: key);
 
   final String imageUrl;
+  final double? width;
 
   @override
   Widget build(BuildContext context) {
     return CachedNetworkImage(
       imageUrl: imageUrl,
       fit: BoxFit.cover,
+      width: width ?? double.infinity,
       placeholder: (context, url) => Center(child: loadWidget()),
       errorWidget: (context, url, error) => const Center(
         child: Icon(

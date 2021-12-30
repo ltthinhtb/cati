@@ -1,10 +1,13 @@
 import 'dart:async';
 import 'package:cati/common/app_colors.dart';
 import 'package:cati/common/app_images.dart';
+import 'package:cati/ui/widgets/common/class_learning_progress_card.dart';
 import 'package:cati/ui/widgets/common/comment_card.dart';
 import 'package:cati/ui/widgets/common/course_date_card.dart';
+import 'package:cati/ui/widgets/common/course_learning_progress_card.dart';
 import 'package:cati/ui/widgets/common/course_title_widget.dart';
 import 'package:cati/ui/widgets/common/entertainment_news_card.dart';
+import 'package:cati/ui/widgets/common/image_arrow_right_card.dart';
 import 'package:cati/ui/widgets/common/see_more_line.dart';
 import 'package:cati/ui/widgets/common/teacher_info_card.dart';
 import 'package:cati/ui/widgets/common/video_course_card.dart';
@@ -194,7 +197,7 @@ class _PinCodeVerificationViewState extends State<PinCodeVerificationView> {
                   ),
                 ),
                 Container(
-                  height: 900,
+                  height: 1500,
                   margin: const EdgeInsets.only(top: 20),
                   color: AppColors.green.withOpacity(.2),
                   alignment: Alignment.center,
@@ -210,36 +213,33 @@ class _PinCodeVerificationViewState extends State<PinCodeVerificationView> {
                       ),
                       const SizedBox(height: 20),
                       Row(
-                        children: const [
+                        children: [
                           Expanded(
                             child: VideoCourseCard(
                               courseName: 'Tên khóa học mới.....',
                               courseNumber: 50,
-                              courseImage:
-                                  'https://firebasestorage.googleapis.com/v0/b/zporter-dev-media/o/message%2F2021-12-24%2014%3A56%3A55.309426?alt=media&token=a3660d6e-651b-456f-940c-fb9fd53d7a55',
+                              courseImage: imageUrl,
                             ),
                           ),
-                          SizedBox(width: 20),
+                          const SizedBox(width: 20),
                           Expanded(
                             child: VideoCourseCard(
                               courseName: 'Tên khóa học mới.....',
                               courseNumber: 50,
-                              courseImage:
-                                  'https://firebasestorage.googleapis.com/v0/b/zporter-dev-media/o/message%2F2021-12-24%2014%3A56%3A55.309426?alt=media&token=a3660d6e-651b-456f-940c-fb9fd53d7a55',
+                              courseImage: imageUrl,
                             ),
                           ),
                         ],
                       ),
                       const SizedBox(height: 20),
                       Row(
-                        children: const [
+                        children: [
                           Expanded(
                             child: TeacherInfoCard(
                               position: 'Trung cấp - Cao Đẳng',
                               workingAddress: 'Catiedu',
                               teacherName: 'Cô: Nguyễn Thu Trà ',
-                              teacherImage:
-                                  'https://firebasestorage.googleapis.com/v0/b/zporter-dev-media/o/message%2F2021-12-24%2014%3A56%3A55.309426?alt=media&token=a3660d6e-651b-456f-940c-fb9fd53d7a55',
+                              teacherImage: imageUrl,
                             ),
                           ),
                           SizedBox(width: 20),
@@ -248,8 +248,7 @@ class _PinCodeVerificationViewState extends State<PinCodeVerificationView> {
                               position: 'Trung cấp - Cao Đẳng',
                               workingAddress: 'Catiedu',
                               teacherName: 'Cô: Nguyễn Thu Trà',
-                              teacherImage:
-                                  'https://firebasestorage.googleapis.com/v0/b/zporter-dev-media/o/message%2F2021-12-24%2014%3A56%3A55.309426?alt=media&token=a3660d6e-651b-456f-940c-fb9fd53d7a55',
+                              teacherImage: imageUrl,
                             ),
                           ),
                         ],
@@ -262,8 +261,7 @@ class _PinCodeVerificationViewState extends State<PinCodeVerificationView> {
                               courseName:
                                   'Kiểm định an toàn kỹ thuật thiết bị Uy tín...',
                               dateTime: DateTime.now(),
-                              courseImage:
-                                  'https://firebasestorage.googleapis.com/v0/b/zporter-dev-media/o/message%2F2021-12-24%2014%3A56%3A55.309426?alt=media&token=a3660d6e-651b-456f-940c-fb9fd53d7a55',
+                              courseImage: imageUrl,
                             ),
                           ),
                           const SizedBox(width: 20),
@@ -272,20 +270,68 @@ class _PinCodeVerificationViewState extends State<PinCodeVerificationView> {
                               courseName:
                                   'Kiểm định an toàn kỹ thuật thiết bị Uy tín...',
                               dateTime: DateTime.now(),
-                              courseImage:
-                                  'https://firebasestorage.googleapis.com/v0/b/zporter-dev-media/o/message%2F2021-12-24%2014%3A56%3A55.309426?alt=media&token=a3660d6e-651b-456f-940c-fb9fd53d7a55',
+                              courseImage: imageUrl,
                             ),
                           ),
                         ],
                       ),
                       const SizedBox(height: 20),
-                      const CommentCard(
-                        avatarUrl:
-                            'https://firebasestorage.googleapis.com/v0/b/zporter-dev-media/o/message%2F2021-12-24%2014%3A56%3A55.309426?alt=media&token=a3660d6e-651b-456f-940c-fb9fd53d7a55',
+                      CommentCard(
+                        avatarUrl: imageUrl,
                         commenterName: 'Hương Nguyễn',
                         content:
                             'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm',
                       ),
+                      const SizedBox(height: 50),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: CourseLearningProgressCard(
+                              courseName:
+                                  'Mô hình MVC và ứng dụng thiết kế web...',
+                              completeLearningPercent: 5,
+                              lessonNumber: 50,
+                              courseImageUrl: imageUrl,
+                            ),
+                          ),
+                          const SizedBox(width: 20),
+                          Expanded(
+                            child: CourseLearningProgressCard(
+                              courseName:
+                                  'Mô hình MVC và ứng dụng thiết kế web...',
+                              completeLearningPercent: 5,
+                              lessonNumber: 50,
+                              courseImageUrl: imageUrl,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 50),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: ClassLearningProgressCard(
+                              className: 'LỚP: K01-SKĐD',
+                              schoolName: 'Trường Trung Cấp Văn Hóa Du Lịch',
+                              schoolLevel: 'TRUNG CẤP CHÍNH QUY',
+                              majorName: 'Điều dưỡng',
+                              completeLearningPercent: 5,
+                              classImageUrl: imageUrl,
+                            ),
+                          ),
+                          const SizedBox(width: 20),
+                          Expanded(
+                            child: ClassLearningProgressCard(
+                              className: 'LỚP: K01-SKĐD',
+                              schoolName: 'Trường Trung Cấp Văn Hóa Du Lịch',
+                              schoolLevel: 'TRUNG CẤP CHÍNH QUY',
+                              majorName: 'Điều dưỡng',
+                              completeLearningPercent: 5,
+                              classImageUrl: imageUrl,
+                            ),
+                          ),
+                        ],
+                      )
                     ],
                   ),
                 ),
@@ -294,8 +340,7 @@ class _PinCodeVerificationViewState extends State<PinCodeVerificationView> {
                   dateTime: DateTime.now(),
                   title: 'Hướng nghiệp',
                   description: '10 bí quyết khi làm bài trắc nghiệm phải nhớ',
-                  imageUrl:
-                      'https://firebasestorage.googleapis.com/v0/b/zporter-dev-media/o/message%2F2021-12-24%2014%3A56%3A55.309426?alt=media&token=a3660d6e-651b-456f-940c-fb9fd53d7a55',
+                  imageUrl: imageUrl,
                 ),
                 const SeeMoreLine(),
                 const SizedBox(height: 50),
@@ -308,6 +353,8 @@ class _PinCodeVerificationViewState extends State<PinCodeVerificationView> {
                   penColor: AppColors.grey,
                 ),
                 const SizedBox(height: 50),
+                ImageArrowRightCard(imageUrl: imageUrl),
+                const SizedBox(height: 50),
               ],
             ),
           ),
@@ -316,3 +363,6 @@ class _PinCodeVerificationViewState extends State<PinCodeVerificationView> {
     );
   }
 }
+
+String imageUrl =
+    'https://phantom-marca.unidadeditorial.es/f05288ebbb00fcefb86713d0b435c7fb/resize/1320/f/jpg/assets/multimedia/imagenes/2021/12/10/16391545485537.jpg';

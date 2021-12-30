@@ -20,6 +20,7 @@ class AppImages {
   static String videoPlay = 'assets/icon_svg/video_play.svg';
   static String whiteHat = 'assets/icon_svg/white_hat.svg';
   static String dotLine = 'assets/icon_svg/dot_line.svg';
+  static String circleArrowRight = 'assets/icon_svg/circle_arrow_right.svg';
 
   /// Navigation bar icon
   static String home = 'assets/icon_svg/home.svg';
