@@ -10,6 +10,7 @@ class AppCommonButton extends StatelessWidget {
   final double? widthButton;
   final VoidCallback onPress;
   final double buttonRadius;
+  final TextStyle? buttonTextStyle;
 
   const AppCommonButton({
     Key? key,
@@ -21,6 +22,7 @@ class AppCommonButton extends StatelessWidget {
     required this.onPress,
     double? heightButton,
     double? buttonRadius,
+    this.buttonTextStyle
   })  : backgroundColor = backgroundColor ?? AppColors.green,
         splashColor = splashColor ?? AppColors.white,
         heightButton = heightButton ?? 58,
@@ -43,7 +45,7 @@ class AppCommonButton extends StatelessWidget {
         child: Center(
           child: Text(
             textButton,
-            style: Theme.of(context)
+            style: buttonTextStyle ?? Theme.of(context)
                 .textTheme
                 .button!
                 .copyWith(fontSize: 18, color: AppColors.white),
