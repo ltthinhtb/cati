@@ -77,6 +77,7 @@ class ClassLearningProgressCard extends StatelessWidget {
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
+                const SizedBox(height: AppDimens.dimen8),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [

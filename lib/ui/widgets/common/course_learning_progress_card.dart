@@ -51,7 +51,7 @@ class CourseLearningProgressCard extends StatelessWidget {
                   animationDuration: 3000,
                   percent: completeLearningPercent / 100,
                   animateFromLastPercent: true,
-                  progressColor:  AppColors.green,
+                  progressColor: AppColors.green,
                   backgroundColor: AppColors.linearProgressBackground,
                   padding: EdgeInsets.zero,
                 ),

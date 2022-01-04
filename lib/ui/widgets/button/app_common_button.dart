@@ -11,6 +11,8 @@ class AppCommonButton extends StatelessWidget {
   final VoidCallback onPress;
   final double buttonRadius;
   final TextStyle? buttonTextStyle;
+  final BorderSide? borderSide;
+  final Widget? leadingIcon;
 
   const AppCommonButton({
     Key? key,
@@ -22,7 +24,9 @@ class AppCommonButton extends StatelessWidget {
     required this.onPress,
     double? heightButton,
     double? buttonRadius,
-    this.buttonTextStyle
+    this.borderSide,
+    this.buttonTextStyle,
+    this.leadingIcon,
   })  : backgroundColor = backgroundColor ?? AppColors.green,
         splashColor = splashColor ?? AppColors.white,
         heightButton = heightButton ?? 58,
@@ -38,17 +42,26 @@ class AppCommonButton extends StatelessWidget {
         fillColor: backgroundColor,
         shape: OutlineInputBorder(
           borderRadius: BorderRadius.circular(buttonRadius),
-          borderSide: BorderSide.none,
+          borderSide: borderSide ?? BorderSide.none,
         ),
         splashColor: splashColor,
         onPressed: onPress,
         child: Center(
-          child: Text(
-            textButton,
-            style: buttonTextStyle ?? Theme.of(context)
-                .textTheme
-                .button!
-                .copyWith(fontSize: 18, color: AppColors.white),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              leadingIcon ?? const SizedBox(),
+              Text(
+                textButton,
+                style: buttonTextStyle ??
+                    Theme.of(context)
+                        .textTheme
+                        .button!
+                        .copyWith(fontSize: 18, color: AppColors.white),
+              ),
+            ],
           ),
         ),
       ),
