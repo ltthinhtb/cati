@@ -22,19 +22,25 @@ class SignUpLogic extends GetxController {
     final phone = state.phoneController.text;
     final email = state.emailController.text;
     final pass = state.passController.text;
+    final repeatPass = state.repeatPassController.text;
     bool validateFullName = state.formKeyFullName.currentState!.validate();
     bool validatePhone = state.formKeyPhone.currentState!.validate();
     bool validateEmail = state.formKeyEmail.currentState!.validate();
     bool validatePass = state.formKeyPass.currentState!.validate();
-    bool validate =
-        validateFullName && validatePhone && validateEmail && validatePass;
+    bool validateRepeatPass = state.formKeyRepeatPass.currentState!.validate();
+    bool validate = validateFullName &&
+        validatePhone &&
+        validateEmail &&
+        validatePass &&
+        validateRepeatPass;
     if (validate) {
       try {
         SignUpRequest request = SignUpRequest(
             userName: fullName,
             phoneNumber: phone,
             email: email,
-            password: pass);
+            password: pass,
+            repeatPass: repeatPass);
         var response = await apiService.signUp(request);
         await AppDiaLog.showNoticeDialog(
                 title: S.current.notice,
