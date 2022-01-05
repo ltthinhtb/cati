@@ -21,9 +21,9 @@
   "please_input_phone_number": "Tên đăng nhập không được để trống",
   "phone_not_valid": "Số điện thoại không hợp lệ",
   "home": "Trang chủ",
-  "message": "Tin nhắn",
-  "history": "Lịch sử giao dịch",
-  "user": "Tài khoản",
+  "technic": "Kĩ năng",
+  "course": "Khoá học",
+  "test": "Trắc nghiệm",
   "search_real_estate": "Tìm kiếm bất động sản",
   "bds_buy": "BĐS\nmua cung",
   "bds_sign": "Ký gửi",
@@ -45,5 +45,6 @@
   "email_not_valid": "Email không hợp lệ",
   "sign_up": "Đăng ký",
   "notice": "Thông báo",
-  "password_not_under_6_character": "Mật khẩu không để dưới 6 ký tự"
+  "password_not_under_6_character": "Mật khẩu không để dưới 6 ký tự",
+  "account": "Tài khoản"
 }

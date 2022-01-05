@@ -1,4 +1,6 @@
+import 'package:cati/common/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import 'main_logic.dart';
@@ -47,14 +49,18 @@ class _MainPageState extends State<MainPage> {
             (int index) {
           return BottomNavigationBarItem(
             icon: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 5),
-                child: SizedBox(
-                  height: 24,
-                  width: 24,
-                  child: Image.asset(
-                    MainTab.values[index].icon,
-                  ),
-                )),
+              padding: const EdgeInsets.symmetric(vertical: 5),
+              child: SizedBox(
+                height: 24,
+                width: 24,
+                child: SvgPicture.asset(
+                  MainTab.values[index].icon,
+                  color: index == state.selectedIndex.value
+                      ? AppColors.green
+                      : null,
+                ),
+              ),
+            ),
             label: MainTab.values[index].label(context),
           );
         }),

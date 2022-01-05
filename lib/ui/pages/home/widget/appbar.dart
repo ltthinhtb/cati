@@ -10,7 +10,7 @@ class AppBarHome extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       leading: Align(
         alignment: Alignment.centerRight,
-        child: Image.asset(
+        child: SvgPicture.asset(
           AppImages.home,
           height: 30,
           width: 30,
