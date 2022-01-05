@@ -16,13 +16,13 @@ extension MainTabExtension on MainTab {
       case MainTab.home:
         return S.of(context).home;
       case MainTab.technic:
-        return S.of(context).message;
+        return S.of(context).technic;
       case MainTab.course:
-        return S.of(context).history;
+        return S.of(context).course;
       case MainTab.test:
-        return S.of(context).user;
+        return S.of(context).test;
       case MainTab.account:
-        return S.of(context).user;
+        return S.of(context).account;
     }
   }
 

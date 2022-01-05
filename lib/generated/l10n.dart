@@ -270,31 +270,31 @@ class S {
     );
   }
 
-  /// `Tin nhắn`
-  String get message {
+  /// `Kĩ năng`
+  String get technic {
     return Intl.message(
-      'Tin nhắn',
-      name: 'message',
+      'Kĩ năng',
+      name: 'technic',
       desc: '',
       args: [],
     );
   }
 
-  /// `Lịch sử giao dịch`
-  String get history {
+  /// `Khoá học`
+  String get course {
     return Intl.message(
-      'Lịch sử giao dịch',
-      name: 'history',
+      'Khoá học',
+      name: 'course',
       desc: '',
       args: [],
     );
   }
 
-  /// `Tài khoản`
-  String get user {
+  /// `Trắc nghiệm`
+  String get test {
     return Intl.message(
-      'Tài khoản',
-      name: 'user',
+      'Trắc nghiệm',
+      name: 'test',
       desc: '',
       args: [],
     );
@@ -515,6 +515,16 @@ class S {
     return Intl.message(
       'Mật khẩu không để dưới 6 ký tự',
       name: 'password_not_under_6_character',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tài khoản`
+  String get account {
+    return Intl.message(
+      'Tài khoản',
+      name: 'account',
       desc: '',
       args: [],
     );

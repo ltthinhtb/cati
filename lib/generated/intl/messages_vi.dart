@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "account": MessageLookupByLibrary.simpleMessage("Tài khoản"),
         "bds_buy": MessageLookupByLibrary.simpleMessage("BĐS\nmua cung"),
         "bds_buy_together":
             MessageLookupByLibrary.simpleMessage("Bất động sản mua chung"),
@@ -30,6 +31,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Báo cáo\ndoanh thu"),
         "bds_sign": MessageLookupByLibrary.simpleMessage("Ký gửi"),
         "bought": MessageLookupByLibrary.simpleMessage("Đã bán"),
+        "course": MessageLookupByLibrary.simpleMessage("Khoá học"),
         "create_account": MessageLookupByLibrary.simpleMessage("Tạo tài khoản"),
         "discover": MessageLookupByLibrary.simpleMessage("Khám phá"),
         "email_not_valid":
@@ -37,7 +39,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "error": MessageLookupByLibrary.simpleMessage("Lỗi"),
         "forgot_pass": MessageLookupByLibrary.simpleMessage("Quên mật khẩu"),
         "full_name": MessageLookupByLibrary.simpleMessage("Họ và tên"),
-        "history": MessageLookupByLibrary.simpleMessage("Lịch sử giao dịch"),
         "home": MessageLookupByLibrary.simpleMessage("Trang chủ"),
         "input_phone":
             MessageLookupByLibrary.simpleMessage("Nhập số điện thoại"),
@@ -47,7 +48,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Nhập số điện thoại của bạn"),
         "invest": MessageLookupByLibrary.simpleMessage("Đầu tư"),
         "login": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
-        "message": MessageLookupByLibrary.simpleMessage("Tin nhắn"),
         "network_error":
             MessageLookupByLibrary.simpleMessage("Lỗi kết nối mạng"),
         "not_account":
@@ -83,8 +83,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "settings_title": MessageLookupByLibrary.simpleMessage("Cài đặt"),
         "sign_up": MessageLookupByLibrary.simpleMessage("Đăng ký"),
         "sold": MessageLookupByLibrary.simpleMessage("Đã mua"),
+        "technic": MessageLookupByLibrary.simpleMessage("Kĩ năng"),
+        "test": MessageLookupByLibrary.simpleMessage("Trắc nghiệm"),
         "trending": MessageLookupByLibrary.simpleMessage("Xu hướng"),
-        "user": MessageLookupByLibrary.simpleMessage("Tài khoản"),
         "welcome_app": MessageLookupByLibrary.simpleMessage(
             "Chào mừng bạn đến với\nCTV-HOLDINGS"),
         "welcome_app_2": MessageLookupByLibrary.simpleMessage(
