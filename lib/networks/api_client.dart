@@ -18,7 +18,7 @@ abstract class ApiClient {
 
 class _ApiClient implements ApiClient {
   _ApiClient(this._dio, {this.baseUrl}) {
-    baseUrl ??= 'https://dev-ctvland-application-api.azurewebsites.net';
+    baseUrl ??= 'https://api.catiedu.net/api/app';
   }
 
   final Dio _dio;
@@ -76,7 +76,7 @@ class _ApiClient implements ApiClient {
   @override
   Future<TokenEntity> authLogin(String user, String pass) async {
     Response _result = await _requestApi(_dio.post(
-        '/api/v1/Authenticate/signIn',
+        '/login-user',
         data: {'username': user, 'password': pass}));
     final value = TokenEntity.fromJson(_result.data!);
     return value;

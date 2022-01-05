@@ -54,16 +54,18 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Bạn chưa có tài khoản? "),
         "notice": MessageLookupByLibrary.simpleMessage("Thông báo"),
         "password": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
+        "password_not_under_6_character": MessageLookupByLibrary.simpleMessage(
+            "Mật khẩu không để dưới 6 ký tự"),
         "phone_not_valid":
             MessageLookupByLibrary.simpleMessage("Số điện thoại không hợp lệ"),
-        "please_input_email":
-            MessageLookupByLibrary.simpleMessage("Vui lòng nhập email"),
+        "please_input_email": MessageLookupByLibrary.simpleMessage(
+            "Tên đăng nhập không được để trống"),
         "please_input_full_name":
             MessageLookupByLibrary.simpleMessage("Vui lòng nhập họ tên"),
-        "please_input_password":
-            MessageLookupByLibrary.simpleMessage("Vui lòng nhập mật khẩu"),
-        "please_input_phone_number":
-            MessageLookupByLibrary.simpleMessage("Vui lòng nhập số điện thoại"),
+        "please_input_password": MessageLookupByLibrary.simpleMessage(
+            "Mật khẩu không được để trống"),
+        "please_input_phone_number": MessageLookupByLibrary.simpleMessage(
+            "Tên đăng nhập không được để trống"),
         "register_now": MessageLookupByLibrary.simpleMessage("Đăng ký ngay"),
         "remain": MessageLookupByLibrary.simpleMessage("Còn lại"),
         "search_real_estate":

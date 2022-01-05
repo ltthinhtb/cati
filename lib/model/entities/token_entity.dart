@@ -1,39 +1,27 @@
 class TokenEntity {
-  String? userMsg;
-  Token? data;
-
-  TokenEntity({this.userMsg, this.data});
-
-  TokenEntity.fromJson(Map<String, dynamic> json) {
-    userMsg = json['userMsg'];
-    data = json['data'] != null ? Token.fromJson(json['data']) : null;
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['userMsg'] = userMsg;
-    if (this.data != null) {
-      data['data'] = this.data!.toJson();
-    }
-    return data;
-  }
-}
-
-class Token {
-  String? token;
+  int? code;
+  String? status;
+  String? message;
+  String? accessToken;
   String? refreshToken;
 
-  Token({this.token, this.refreshToken});
+  TokenEntity({this.code, this.status, this.message});
 
-  Token.fromJson(Map<String, dynamic> json) {
-    token = json['token'];
-    refreshToken = json['refreshToken'];
+  TokenEntity.fromJson(Map<String, dynamic> json) {
+    code = json['code'];
+    status = json['status'];
+    message = json['message'];
+    accessToken = json['access_token'];
+    refreshToken = json['refresh_token'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['token'] = token;
-    data['refreshToken'] = refreshToken;
+    data['code'] = code;
+    data['status'] = status;
+    data['message'] = message;
+    data['access_token'] = accessToken;
+    data['refresh_token'] = refreshToken;
     return data;
   }
 }

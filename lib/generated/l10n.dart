@@ -190,10 +190,10 @@ class S {
     );
   }
 
-  /// `Vui lòng nhập mật khẩu`
+  /// `Mật khẩu không được để trống`
   String get please_input_password {
     return Intl.message(
-      'Vui lòng nhập mật khẩu',
+      'Mật khẩu không được để trống',
       name: 'please_input_password',
       desc: '',
       args: [],
@@ -240,10 +240,10 @@ class S {
     );
   }
 
-  /// `Vui lòng nhập số điện thoại`
+  /// `Tên đăng nhập không được để trống`
   String get please_input_phone_number {
     return Intl.message(
-      'Vui lòng nhập số điện thoại',
+      'Tên đăng nhập không được để trống',
       name: 'please_input_phone_number',
       desc: '',
       args: [],
@@ -470,10 +470,10 @@ class S {
     );
   }
 
-  /// `Vui lòng nhập email`
+  /// `Tên đăng nhập không được để trống`
   String get please_input_email {
     return Intl.message(
-      'Vui lòng nhập email',
+      'Tên đăng nhập không được để trống',
       name: 'please_input_email',
       desc: '',
       args: [],
@@ -505,6 +505,16 @@ class S {
     return Intl.message(
       'Thông báo',
       name: 'notice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mật khẩu không để dưới 6 ký tự`
+  String get password_not_under_6_character {
+    return Intl.message(
+      'Mật khẩu không để dưới 6 ký tự',
+      name: 'password_not_under_6_character',
       desc: '',
       args: [],
     );

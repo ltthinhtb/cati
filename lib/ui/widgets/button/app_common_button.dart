@@ -56,10 +56,11 @@ class AppCommonButton extends StatelessWidget {
               Text(
                 textButton,
                 style: buttonTextStyle ??
-                    Theme.of(context)
-                        .textTheme
-                        .button!
-                        .copyWith(fontSize: 18, color: AppColors.white),
+                    Theme.of(context).textTheme.subtitle1!.copyWith(
+                          fontSize: 18,
+                          color: AppColors.white,
+                          fontWeight: FontWeight.w600,
+                        ),
               ),
             ],
           ),

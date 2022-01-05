@@ -98,7 +98,7 @@ class AppThemes {
     isDense: true,
     labelStyle: AppTextStyle.subTitle1.copyWith(color: AppColors.hintText),
     hintStyle: AppTextStyle.subTitle1.copyWith(color: AppColors.hintText),
-    errorStyle: AppTextStyle.subTitle1.copyWith(color: AppColors.red),
+    errorStyle: AppTextStyle.caption.copyWith(color: AppColors.red),
     border: _defaultBorder(),
     focusedBorder: _defaultBorder().copyWith(
         borderSide: const BorderSide(color: AppColors.primary, width: 1)),

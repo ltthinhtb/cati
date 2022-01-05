@@ -18,14 +18,14 @@ class SignInLogic extends GetxController with Validator {
 
   void signIn() async {
     AppLoading.showLoading();
-    final phone = state.phoneTextController.text;
+    final email = state.emailTextController.text;
     final password = state.passwordTextController.text;
-    bool validateUser = state.formKeyPhone.currentState!.validate();
+    bool validateUser = state.formKeyEmail.currentState!.validate();
     bool validatePass = state.formKeyPass.currentState!.validate();
     bool validate = validateUser && validatePass;
     if (validate) {
       try {
-        final result = await apiService.signIn(phone, password);
+        final result = await apiService.signIn(email, password);
         if (result != null) {
           authService.saveToken(result);
           AppLoading.disMissLoading();

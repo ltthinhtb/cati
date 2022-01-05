@@ -5,8 +5,8 @@ class AppConfigs {
 
   ///STAGING
   static const envName = "Staging";
-  static const webUrl = "https://dev-ctvland-application-api.azurewebsites.net";
-  static const baseUrl = "https://dev-ctvland-application-api.azurewebsites.net";
+  static const webUrl = "https://api.catiedu.net/api/app";
+  static const baseUrl = "https://api.catiedu.net/api/app";
   static const socketUrl = 'wss://socket.themoviedb.org'; //Todo: change this
 
   ///PRODUCTION
@@ -24,7 +24,8 @@ class AppConfigs {
   static const dateAPIFormat = 'dd/MM/yyyy';
   static const dateDisplayFormat = 'dd/MM/yyyy';
 
-  static const dateTimeAPIFormat = "MM/dd/yyyy'T'hh:mm:ss.SSSZ"; //Use DateTime.parse(date) instead of ...
+  static const dateTimeAPIFormat =
+      "MM/dd/yyyy'T'hh:mm:ss.SSSZ"; //Use DateTime.parse(date) instead of ...
   static const dateTimeDisplayFormat = 'dd/MM/yyyy HH:mm';
 
   ///Date range
