@@ -1,6 +1,7 @@
 import 'package:cati/common/app_colors.dart';
 import 'package:cati/common/app_dimens.dart';
 import 'package:cati/common/app_images.dart';
+import 'package:cati/router/route_config.dart';
 import 'package:cati/ui/widgets/button/app_common_button.dart';
 import 'package:cati/ui/widgets/textfields/app_text_field.dart';
 import 'package:cati/utils/validator.dart';
@@ -119,7 +120,10 @@ class _SignInPageState extends State<SignInPage> with Validator {
                   TextSpan(
                     text: 'Đăng ký',
                     style: const TextStyle(color: AppColors.green),
-                    recognizer: TapGestureRecognizer()..onTap = () {},
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        Get.toNamed(RouteConfig.signUp);
+                      },
                   ),
                 ],
               ),
