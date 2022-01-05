@@ -18,8 +18,11 @@ class SignInLogic extends GetxController with Validator {
 
   void signIn() async {
     AppLoading.showLoading();
+    state.isLoginFail.value = false;
     final email = state.emailTextController.text;
     final password = state.passwordTextController.text;
+
+    /// Validate email and password
     bool validateUser = state.formKeyEmail.currentState!.validate();
     bool validatePass = state.formKeyPass.currentState!.validate();
     bool validate = validateUser && validatePass;
@@ -33,13 +36,22 @@ class SignInLogic extends GetxController with Validator {
         } else {
           signIn();
         }
-      } on ErrorException catch (error) {
-        AppSnackBar.showError(message: error.userMsg);
+      } on ErrorException catch (_) {
+        validateForm();
       } catch (error) {
+        validateForm();
         logger.e(error.toString());
       }
     }
     AppLoading.disMissLoading();
+  }
+
+  /// Validate email and password
+  void validateForm() {
+    /// Use this flag to check login success or not
+    state.isLoginFail.value = true;
+    state.formKeyEmail.currentState!.validate();
+    state.formKeyPass.currentState!.validate();
   }
 
   @override

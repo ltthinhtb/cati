@@ -13,7 +13,7 @@ class ApiInterceptors extends InterceptorsWrapper {
     final uri = options.uri;
     final data = options.data;
     options.headers['Authorization'] =
-        AuthService().token.value?.accessToken ?? '';
+        Get.find<AuthService>().token.value?.accessToken ?? '';
     logger.log(
         "\n\n--------------------------------------------------------------------------------------------------------");
     if (method == 'GET') {
