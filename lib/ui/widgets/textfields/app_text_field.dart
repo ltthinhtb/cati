@@ -90,9 +90,12 @@ class _AppTextFieldWidgetState extends State<AppTextFieldWidget> {
                     },
                     child: Padding(
                       padding: const EdgeInsets.only(right: 10),
-                      child: Icon(_obscureText
-                          ? Icons.remove_red_eye_outlined
-                          : Icons.remove_red_eye),
+                      child: Icon(
+                        _obscureText
+                            ? Icons.remove_red_eye_outlined
+                            : Icons.remove_red_eye,
+                        color: AppColors.hintText,
+                      ),
                     ),
                   )
                 : null,

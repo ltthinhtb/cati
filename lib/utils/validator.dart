@@ -5,7 +5,6 @@ class Validator {
   static final RegExp _emailRegex = RegExp(
       r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$');
 
-
   String? checkPhoneNumber(String phoneNumber) {
     if (phoneNumber.trim().isEmpty) {
       return S.current.please_input_phone_number;
@@ -27,6 +26,8 @@ class Validator {
   String? checkPass(String value) {
     if (value.trim().isEmpty) {
       return S.current.please_input_password;
+    } else if (value.trim().length < 6) {
+      return S.current.password_not_under_6_character;
     } else {
       return null;
     }
